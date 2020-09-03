@@ -1,0 +1,50 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  height: 100vh;
+  overflow-y: hidden;
+}
+body > div {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body > div div {
+  border-radius: 100px;
+  margin: 10px;
+  flex: 1;
+  box-sizing: border-box;
+  height: 90vh;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+  color: #fff;
+  text-align: center;
+  line-height: 90vh;
+  vertical-align: bottom;
+}
+body > div div:hover {
+  flex: 7;
+  /* background-size: 100% 100%; */
+}
+body > div :nth-child(1) {
+  background-image: url("imgs/1.jpg");
+}
+body > div :nth-child(2) {
+  background-image: url("imgs/2.jpg");
+}
+body > div :nth-child(3) {
+  background-image: url("imgs/3.jpg");
+}
+body > div :nth-child(4) {
+  background-image: url("imgs/4.jpg");
+}
+body > div :nth-child(5) {
+  background-image: url("imgs/5.jpg");
+}
