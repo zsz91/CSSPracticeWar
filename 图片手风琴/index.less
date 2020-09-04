@@ -1,40 +1,39 @@
-html,body{
-    padding: 0;
-    margin: 0;
-    background-color: #000;
-    height: 100vh;
-    overflow-y: hidden;
-
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  height: 100vh;
+  overflow-y: hidden;
 }
 
-body>div{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    div{
-        border-radius: 10px;
-        margin: 10px;
-        flex: 1;
-        box-sizing:border-box ; 
-        height: 100vh;
-        transition-duration: 2s;
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        &:hover{
-            flex: 7;
-            background-size: 100% 100%;
-        }
+body > div {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  div {
+    border-radius: 10px;
+    margin: 10px;
+    flex: 1;
+    box-sizing: border-box;
+    height: 100vh;
+    transition-duration: 2s;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    &:hover {
+      flex: 7;
+      background-size: 100% 100%;
     }
+  }
 
-    & :nth-child(1){
-        background-image: url('./imgs/1.jpg');
-    }
-    & :nth-child(2){
-        background-image: url('./imgs/2.jpg');
-    }
-    & :nth-child(3){
-        background-image: url('./imgs/3.jpg');
-    }
-    }
-   
+  & :nth-child(1) {
+    background-image: url("./imgs/1.jpg");
+  }
+  & :nth-child(2) {
+    background-image: url("./imgs/2.jpg");
+  }
+  & :nth-child(3) {
+    background-image: url("./imgs/3.jpg");
+  }
+}

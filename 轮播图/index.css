@@ -1,0 +1,43 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: #fff;
+}
+.contentDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.contentDiv .icon {
+  flex: 1;
+  font-size: 100px;
+  cursor: pointer;
+}
+.contentDiv .imgs {
+  flex: 7;
+  overflow: hidden;
+  display: flex;
+}
+.contentDiv .imgs img {
+  width: 100%;
+  height: auto;
+}
+.contentDiv .imgs:hover {
+  border: 1px solid red;
+  margin-right: 1000px;
+}
+.contentDiv :last-child {
+  text-align: right;
+}
+.contentDiv .imgDiv {
+  flex: 9;
+}
