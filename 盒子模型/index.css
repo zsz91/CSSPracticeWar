@@ -12,16 +12,5 @@ div {
   width: min-content;
   margin: 30px;
   border: 1px solid red;
-<<<<<<< HEAD
   color: #fff;
-=======
-  widows: 100px;
-  outline-style: dashed;
-}
-body > div:nth-child(1) {
-  margin-bottom: 50px;
-}
-body > div:nth-child(2) {
-  margin-top: 30px;
->>>>>>> 7d8c6aa09eaa8e26433f7819efe82978fedc4378
 }

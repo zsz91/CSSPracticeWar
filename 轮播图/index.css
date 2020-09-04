@@ -4,40 +4,34 @@ body {
   margin: 0;
   background-color: #000;
   height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  box-sizing: border-box;
   color: #fff;
 }
-.contentDiv {
+.content {
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: auto;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100%;
 }
-.contentDiv .icon {
-  flex: 1;
-  font-size: 100px;
+.content .icon {
+  line-height: 100vh;
   cursor: pointer;
+  font-size: 24px;
 }
-.contentDiv .imgs {
-  flex: 7;
+.content .imgList {
+  box-sizing: border-box;
+  white-space: nowrap;
   overflow: hidden;
+  width: 1100px;
+}
+.content .imgList .imgContent {
   display: flex;
+  align-items: center;
+  height: 100%;
+  width: 1100px;
 }
-.contentDiv .imgs img {
-  width: 100%;
+.content .imgList img {
+  width: 1100px;
   height: auto;
-}
-.contentDiv .imgs:hover {
-  border: 1px solid red;
-  margin-right: 1000px;
-}
-.contentDiv :last-child {
-  text-align: right;
-}
-.contentDiv .imgDiv {
-  flex: 9;
+  transition: all 2s ease;
 }
