@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  height: 100vh;
+  color: #fff;
+}
+.outDiv {
+  font-size: 29px;
+  height: 1ex;
+  background-color: red;
+  width: max-content;
+  position: relative;
+  display: inline-block;
+}
