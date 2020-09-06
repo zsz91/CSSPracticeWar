@@ -1,0 +1,109 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  height: 100vh;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  ul {
+    position: relative;
+    width: 600px;
+    height: 280px;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    input[type="radio"] {
+      position: relative;
+      z-index: 100;
+      display: none;
+    }
+    .label-list {
+      position: absolute;
+      width: 100%;
+      bottom: 12px;
+      text-align: center;
+      label {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 0 3px;
+        border: 2px solid #fff;
+      }
+    }
+    input[type="radio"]:nth-of-type(1):checked ~ li {
+      transform: translateX(0%);
+    }
+    input[type="radio"]:nth-of-type(2):checked ~ li {
+      transform: translateX(-100%);
+    }
+    input[type="radio"]:nth-of-type(3):checked ~ li {
+      transform: translateX(-200%);
+    }
+    input[type="radio"]:nth-of-type(4):checked ~ li {
+      transform: translateX(-300%);
+    }
+    input[type="radio"]:nth-of-type(1):checked
+      ~ .label-list
+      label:nth-of-type(1) {
+      background-color: #333;
+    }
+    input[type="radio"]:nth-of-type(2):checked
+      ~ .label-list
+      label:nth-of-type(2) {
+      background-color: #333;
+    }
+    input[type="radio"]:nth-of-type(3):checked
+      ~ .label-list
+      label:nth-of-type(3) {
+      background-color: #333;
+    }
+    input[type="radio"]:nth-of-type(4):checked
+      ~ .label-list
+      label:nth-of-type(4) {
+      background-color: #333;
+    }
+    li {
+      width: inherit;
+      height: inherit;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Helvetica;
+      font-size: 120px;
+      transition: transform 0.5s ease-in-out;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      // background-position: center;
+    }
+    li:nth-of-type(1) {
+      background-image: url("./imgs/1.jpg");
+    }
+    li:nth-of-type(2) {
+      background-image: url("./imgs/2.jpg");
+      left: 100%;
+    }
+    li:nth-of-type(3) {
+      background-image: url("./imgs/3.jpg");
+      left: 200%;
+    }
+    li:nth-of-type(4) {
+      background-image: url("./imgs/4.jpg");
+      left: 300%;
+    }
+  }
+}
