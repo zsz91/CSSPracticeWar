@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BFC</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>1. 阻止元素被浮动元素覆盖</h1>
+    <div class="floatDiv">没有BFC</div>
+    <div class="normalDiv"></div>
+    <div class="floatDiv">增加了BFC后</div>
+    <div class="normalDiv disBFC"></div>
+    <br />
+    <br />
+
+    <h1>2. 清除浮动</h1>
+    <div class="borderRed BFC">
+      使用BFC 成功清除了浮动
+      <div class="floatDiv"></div>
+    </div>
+    <br /><br />
+    <div class="borderRed">
+      没使用BFC
+      <div class="floatDiv"></div>
+    </div>
+    <br /><br />
+    <h1>3. 解除边距重叠</h1>
+    <div class="container">
+      <div class="content">不是BFC时 两个div间隔100</div>
+    </div>
+    <div class="container">
+      <div class="content"></div>
+    </div>
+    <div class="container BFC">
+      <div class="content">制造BFC后 两个div间隔200</div>
+    </div>
+    <div class="container">
+      <div class="content"></div>
+    </div>
+  </body>
+</html>
