@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+h2 {
+  color: red;
+}
+h2::after {
+  content: attr(data-aftergetThis);
+  color: purple;
+}
