@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+}
+.main .translateX100 {
+  height: 400px;
+  width: 200px;
+  background-color: red;
+  transition: 2s;
+}
+.main .translateX100:hover {
+  transform: translateX(100%);
+}
+.main .translateY100 {
+  height: 400px;
+  width: 200px;
+  background-color: blue;
+  transition: 2s;
+}
+.main .translateY100:hover {
+  transform: translate3d(100px, 100px, 200px);
+}
+.juzhong {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border: 5px solid silver;
+}
+.rotate {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.rotate div {
+  width: 100px;
+  height: 150px;
+  margin: 20px;
+  border: 5px solid #93d5dc;
+  transition-duration: 2s;
+  transition-property: transform;
+}
+.rotate .orderXY:hover {
+  transform: rotateX(45deg) rotateY(45deg);
+}
+.rotate .orderYX:hover {
+  transform: rotateY(45deg) rotateX(45deg);
+}
+.rotate .rotateX:hover {
+  transform: rotateX(90deg);
+}
+.rotate .rotateY:hover {
+  transform: rotateY(90deg);
+}
+.rotate .rotateZ:hover {
+  transform: rotateZ(90deg);
+}
