@@ -1,0 +1,132 @@
+.loop(@counter) when(@counter > 0) {
+  .loop((@counter - 1));
+  &:nth-of-type(@{counter}) {
+    transform: translateX(-50%) rotate((@counter - 1) * 30deg);
+  }
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #95a5a6;
+  z-index: -3;
+}
+* {
+  box-sizing: border-box;
+}
+.main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  .content {
+    width: 400px;
+    height: 400px;
+    background-image: linear-gradient(to right, #e74c3c, #e67e22, #f1c40f);
+    border-radius: 50%; //最里面的圆
+    position: relative;
+    // z-index: ;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      left: 50%;
+      right: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); // 第二层圆
+      border-radius: 50%;
+      background-color: #2c3e50;
+      //   z-index: -1;
+    }
+    .line {
+      // position: absolute;
+      width: 80%;
+      height: 80%;
+      left: 50%;
+      right: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); // 最上层的圆
+      border-radius: 50%;
+      z-index: 1;
+      position: relative;
+      &::before {
+        // 遮住刻度线
+        content: "";
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: #2c3e50;
+        z-index: 2;
+      }
+      &::after {
+        // 中心的圆点
+        content: "";
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: #fff;
+        z-index: 2;
+      }
+      div {
+        // 刻度div 是一条线 生成6条线
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        background-color: #fff;
+        .loop(6);
+      }
+    }
+    .hour {
+      //时针的线
+      left: 50%;
+      bottom: 50%;
+      position: absolute;
+      width: 5px;
+      height: 10%;
+      transform-origin: bottom;
+      transform: translateX(-50%); // 只需要在x 方向居中
+      background-color: #fff;
+      z-index: 2;
+    }
+    .minute {
+      //时针的线
+      left: 50%;
+      bottom: 50%;
+      position: absolute;
+      width: 2px;
+      height: 25%;
+      transform-origin: bottom;
+      transform: translateX(-50%) rotate(60deg); // 只需要在x 方向居中
+      background-color: #fff;
+      z-index: 2;
+    }
+    .second {
+      //时针的线
+      left: 50%;
+      bottom: 50%;
+      position: absolute;
+      width: 4px;
+      height: 35%;
+      transform-origin: bottom;
+      background-color: #fff;
+      z-index: 2;
+      transition: transform 60s;
+    }
+  }
+}
+body:hover {
+  .second {
+    transform: translateX(-50%) rotate(360deg); // 只需要在x 方向居中
+  }
+}

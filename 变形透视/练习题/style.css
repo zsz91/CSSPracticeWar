@@ -1,0 +1,132 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #95a5a6;
+  z-index: -3;
+}
+* {
+  box-sizing: border-box;
+}
+.main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.main .content {
+  width: 400px;
+  height: 400px;
+  background-image: linear-gradient(to right, #e74c3c, #e67e22, #f1c40f);
+  border-radius: 50%;
+  position: relative;
+}
+.main .content::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #2c3e50;
+}
+.main .content .line {
+  width: 80%;
+  height: 80%;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  position: relative;
+}
+.main .content .line::before {
+  content: "";
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #2c3e50;
+  z-index: 2;
+}
+.main .content .line::after {
+  content: "";
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 2;
+}
+.main .content .line div {
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  background-color: #fff;
+}
+.main .content .line div:nth-of-type(1) {
+  transform: translateX(-50%) rotate(0deg);
+}
+.main .content .line div:nth-of-type(2) {
+  transform: translateX(-50%) rotate(30deg);
+}
+.main .content .line div:nth-of-type(3) {
+  transform: translateX(-50%) rotate(60deg);
+}
+.main .content .line div:nth-of-type(4) {
+  transform: translateX(-50%) rotate(90deg);
+}
+.main .content .line div:nth-of-type(5) {
+  transform: translateX(-50%) rotate(120deg);
+}
+.main .content .line div:nth-of-type(6) {
+  transform: translateX(-50%) rotate(150deg);
+}
+.main .content .hour {
+  left: 50%;
+  bottom: 50%;
+  position: absolute;
+  width: 5px;
+  height: 10%;
+  transform-origin: bottom;
+  transform: translateX(-50%);
+  background-color: #fff;
+  z-index: 2;
+}
+.main .content .minute {
+  left: 50%;
+  bottom: 50%;
+  position: absolute;
+  width: 2px;
+  height: 25%;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(60deg);
+  background-color: #fff;
+  z-index: 2;
+}
+.main .content .second {
+  left: 50%;
+  bottom: 50%;
+  position: absolute;
+  width: 4px;
+  height: 35%;
+  transform-origin: bottom;
+  background-color: #fff;
+  z-index: 2;
+  transition: transform 60s;
+}
+body:hover .second {
+  transform: translateX(-50%) rotate(360deg);
+}
