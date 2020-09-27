@@ -15,6 +15,8 @@ main {
   width: 100px;
   height: 100px;
   transform: rotate(45deg);
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
 }
 main .heart {
   width: 100%;
