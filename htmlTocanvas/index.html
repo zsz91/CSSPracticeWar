@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="button">
+      <button onclick="giveImg()">点击生成图片</button>
+    </div>
+    <main id="printDom">
+      <header><img src="./header.png" alt="" /></header>
+      <article>
+        <img src="temp1.png" alt="" />
+        <img src="temp2.png" alt="" />
+        <img src="temp3.png" alt="" />
+        <img src="temp4.png" alt="" />
+      </article>
+      <footer><img src="./footer.png" alt="" /></footer>
+    </main>
+    <div class="result">
+      <p>生成的图片</p>
+    </div>
+  </body>
+  <script src="./html2canvas.min.js"></script>
+  <script>
+    function giveImg() {
+      window
+        .html2canvas(document.querySelector("#printDom"), {
+          allowTaint: true,
+          useCORS: true,
+        })
+        .then((canvas) => {
+          // canvas为转换后的Canvas对象
+          const oImg = new Image();
+          oImg.src = canvas.toDataURL(); // 导出图片
+          console.log(oImg.src);
+          document.querySelector(".result").appendChild(oImg); // 将生成的图片添加到body
+        });
+    }
+  </script>
+</html>
